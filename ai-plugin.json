@@ -12,10 +12,9 @@
     "scope": "https://www.googleapis.com/auth/spreadsheets"
   },
   "api": {
-    "type": "openapi",
-    "url": "https://TU_DOMINIO/openapi.yaml"
-  },
-  "logo_url": "https://TU_DOMINIO/logo.png",
-  "contact_email": "tuemail@dominio.com",
-  "legal_info_url": "https://TU_DOMINIO/legal"
-}
+  "type": "openapi",
+  "url": "https://custom-gpt-sheets-action.vercel.app/openapi.yaml"
+},
+"contact_email": "satorihubgroup@gmail.com"
+
+
