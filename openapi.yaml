@@ -1,17 +1,16 @@
 openapi: 3.1.0
 info:
-  title: Google Sheets Action API - Gastos Financieros
+  title: Gestor de Gastos API
+  description: API para leer y escribir gastos financieros en Google Sheets.
   version: 1.0.0
-  description: API para leer y escribir datos de gastos en Google Sheets.
-
 servers:
-  - url: https://sheets.googleapis.com/v4
-
+  - url: https://sheets.googleapis.com
+    description: API oficial de Google Sheets
 paths:
-  /spreadsheets/{spreadsheetId}/values/{range}:
+  /v4/spreadsheets/{spreadsheetId}/values/{range}:
     get:
-      operationId: getExpenses
-      summary: Leer gastos de la hoja de cálculo.
+      operationId: getSheetData
+      summary: Leer valores de una hoja de cálculo
       parameters:
         - name: spreadsheetId
           in: path
@@ -25,16 +24,14 @@ paths:
             type: string
       responses:
         '200':
-          description: Datos de gastos.
+          description: Datos de la hoja
           content:
             application/json:
               schema:
                 type: object
-
-  /spreadsheets/{spreadsheetId}/values/{range}:append:
-    post:
-      operationId: appendExpense
-      summary: Agregar un nuevo gasto a la hoja.
+    append:
+      operationId: appendSheetData
+      summary: Agregar una fila a una hoja de cálculo
       parameters:
         - name: spreadsheetId
           in: path
@@ -61,7 +58,7 @@ paths:
                       type: string
       responses:
         '200':
-          description: Gasto agregado correctamente.
+          description: Fila agregada exitosamente
           content:
             application/json:
               schema:
