@@ -4,8 +4,8 @@ info:
   description: API para leer y escribir gastos financieros en Google Sheets.
   version: 1.0.0
 servers:
-  - url: https://sheets.googleapis.com
-    description: API oficial de Google Sheets
+  - url: https://custom-gpt-sheets-action.vercel.app
+    description: Dominio del plugin (requerido por OpenAI)
 paths:
   /v4/spreadsheets/{spreadsheetId}/values/{range}:
     get:
