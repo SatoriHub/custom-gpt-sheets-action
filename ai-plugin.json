@@ -1,0 +1,21 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Gestor de Gastos (Google Sheets)",
+  "name_for_model": "gestorGastosSheets",
+  "description_for_human": "Lee y carga gastos financieros en tu Google Sheets.",
+  "description_for_model": "Lee y agrega gastos en la hoja de Google Sheets 'BBDD Flujo'.",
+  "auth": {
+    "type": "oauth",
+    "client_url": "https://accounts.google.com/o/oauth2/v2/auth",
+    "authorization_url": "https://accounts.google.com/o/oauth2/v2/auth",
+    "token_url": "https://oauth2.googleapis.com/token",
+    "scope": "https://www.googleapis.com/auth/spreadsheets"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://TU_DOMINIO/openapi.yaml"
+  },
+  "logo_url": "https://TU_DOMINIO/logo.png",
+  "contact_email": "tuemail@dominio.com",
+  "legal_info_url": "https://TU_DOMINIO/legal"
+}
