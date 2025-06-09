@@ -29,7 +29,7 @@ paths:
             application/json:
               schema:
                 type: object
-    append:
+    post:  # ✅ este reemplaza "append:"
       operationId: appendSheetData
       summary: Agregar una fila a una hoja de cálculo
       parameters:
