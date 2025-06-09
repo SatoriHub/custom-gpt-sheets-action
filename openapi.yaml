@@ -5,12 +5,12 @@ info:
   version: 1.0.0
 servers:
   - url: https://custom-gpt-sheets-action.vercel.app
-    description: Dominio del plugin (requerido por OpenAI)
+    description: Dominio base para las acciones del plugin
 paths:
-  /v4/spreadsheets/{spreadsheetId}/values/{range}:
+  /sheets/{spreadsheetId}/read/{range}:
     get:
       operationId: getSheetData
-      summary: Leer valores de una hoja de cálculo
+      summary: Leer datos desde una hoja de cálculo
       parameters:
         - name: spreadsheetId
           in: path
@@ -24,12 +24,13 @@ paths:
             type: string
       responses:
         '200':
-          description: Datos de la hoja
+          description: Datos leídos exitosamente
           content:
             application/json:
               schema:
                 type: object
-    post:  # ✅ este reemplaza "append:"
+  /sheets/{spreadsheetId}/append/{range}:
+    post:
       operationId: appendSheetData
       summary: Agregar una fila a una hoja de cálculo
       parameters:
