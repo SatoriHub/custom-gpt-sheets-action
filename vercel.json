@@ -1,16 +1,25 @@
 {
+  "projectSettings": {
+    "framework": null
+  },
   "cleanUrls": true,
   "headers": [
     {
       "source": "/openapi.yaml",
       "headers": [
-        { "key": "Content-Type", "value": "text/yaml" }
+        {
+          "key": "Content-Type",
+          "value": "text/yaml"
+        }
       ]
     },
     {
       "source": "/ai-plugin.json",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
       ]
     }
   ]
