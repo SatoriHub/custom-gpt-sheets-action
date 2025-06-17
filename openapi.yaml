@@ -1,49 +1,17 @@
 openapi: 3.1.0
 info:
-  title: Gestor de Gastos API
-  description: API para leer y escribir gastos financieros en Google Sheets.
+  title: API de Carga de Gastos
+  description: Inserta datos en una hoja de cálculo de Google Sheets.
   version: 1.0.0
 servers:
-  - url: https://custom-gpt-sheets-action.vercel.app
-    description: Dominio base para las acciones del plugin
+  - url: https://script.google.com/macros/s/AKfycbyEuqXXtR3TEOmgPUTl--peyDZJ_KlIc16YOim-Y0cHbGH3OxKl8_AOU1MWs57MHVqv/exec
+    description: Web App pública para Google Sheets
+
 paths:
-  /sheets/{spreadsheetId}/read/{range}:
-    get:
-      operationId: getSheetData
-      summary: Leer datos desde una hoja de cálculo
-      parameters:
-        - name: spreadsheetId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: range
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Datos leídos exitosamente
-          content:
-            application/json:
-              schema:
-                type: object
-  /sheets/{spreadsheetId}/append/{range}:
+  /:
     post:
-      operationId: appendSheetData
-      summary: Agregar una fila a una hoja de cálculo
-      parameters:
-        - name: spreadsheetId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: range
-          in: path
-          required: true
-          schema:
-            type: string
+      operationId: appendExpense
+      summary: Agregar un gasto
       requestBody:
         required: true
         content:
@@ -59,8 +27,13 @@ paths:
                       type: string
       responses:
         '200':
-          description: Fila agregada exitosamente
+          description: Confirmación de éxito
           content:
             application/json:
               schema:
                 type: object
+                properties:
+                  success:
+                    type: boolean
+                  error:
+                    type: string
