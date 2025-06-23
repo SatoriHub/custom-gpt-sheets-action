@@ -9,8 +9,9 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://custom-gpt-sheets-action.vercel.app/openapi.yaml"
+    "url": "https://custom-gpt-sheets-action.onrender.com/openapi.yaml"
   },
   "contact_email": "satorihubgroup@gmail.com",
   "legal_info_url": "https://satori-hub.com/legal"
 }
+

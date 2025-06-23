@@ -4,8 +4,8 @@ info:
   description: Inserta datos en una hoja de cálculo de Google Sheets.
   version: 1.0.0
 servers:
-  - url: https://script.google.com/macros/s/AKfycbyEuqXXtR3TEOmgPUTl--peyDZJ_KlIc16YOim-Y0cHbGH3OxKl8_AOU1MWs57MHVqv/exec
-    description: Web App pública para Google Sheets
+  - url: https://custom-gpt-sheets-action.onrender.com
+    description: Servidor proxy en Render
 
 paths:
   /:
