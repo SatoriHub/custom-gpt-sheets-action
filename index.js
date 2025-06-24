@@ -1,4 +1,3 @@
-import 'dotenv/config';              // carga variables de entorno si usás .env
 import express from 'express';
 import cors from 'cors';
 import axios from 'axios';
