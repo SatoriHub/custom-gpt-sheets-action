@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbyEuqXXtR3TEOmgPUTl--peyDZJ_KlIc16YOim-Y0cHbGH3OxKl8_AOU1MWs57MHVqv/exec';
+  'https://script.google.com/macros/s/AKfycbxLzty6M8vFnh0y9z1UFcBwpg34kdPK4Jn32VEDnYbokA00WGSqjew2dd_PTzsgujJg/exec';
 
 app.post('/', async (req, res) => {
   console.log('📥 GPT llamó al proxy con:', JSON.stringify(req.body));
