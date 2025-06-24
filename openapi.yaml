@@ -4,7 +4,7 @@ info:
   description: Inserta datos en una hoja de cálculo de Google Sheets.
   version: 1.0.0
 servers:
-  - url: https://custom-gpt-sheets-action.onrender.com
+  - url: https://custom-gpt-sheets-action-ws.onrender.com
     description: Servidor proxy en Render
 
 paths:
